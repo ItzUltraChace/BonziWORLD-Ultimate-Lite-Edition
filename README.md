@@ -1,18 +1,8 @@
 # BonziWORLD
+I decided to replicate the v1.3.3 build of the original **BonziWORLD.COM** website. The reason why I did this is because it's used for such meme chatting and entertainment purposes and nostalgias. BonziWORLD.COM, the original BonziWORLD, was created by heyjoeway (Joseph Judge) and is used by every people who remembered it. That's what I should thought. This is really the BonziWORLD respiratory since I created it on GitHub.
 
-Just made a revival of the BonziWORLD classic v1.4.2 server.
-New shoutouts to:
-- HeyJoeWay
-- Seamus
-- Loliest Huhytre
-- DonutScout
-- BonziCITIZEN
-- and so much more
-- No shoutouts for bw.org assholes because they are responible for contributing to the hell hole named bonziworld.org
 
-This shitty server i made should be used by bonziworld.com users, i hope.
-
-I am sorry if this server doesn't have rules. I want users to be careful.
+I am sorry if this server doesn't have rules, but sort of it does. I want users to still be _really_ fucking **careful** to not break the rules at all times.
 
 ## Dependencies
 - Node.js and npm
@@ -24,8 +14,8 @@ I am sorry if this server doesn't have rules. I want users to be careful.
 ## Setup
 In a terminal/command prompt, navigate to where you'd like BonziWORLD to be placed and run the following:
 ```
-git clone https://github.com/ItzUltraChace/BonziWORLD-v1.4.2
-cd BonziWORLD v1.4.2
+git clone https://github.com/ItzUltraChace/BonziWORLD-v1.3.3-Oldest-Version-Replica
+cd BonziWORLD-v1.3.3-Oldest-Version-Replica
 ```
 
 ### Client
@@ -42,7 +32,7 @@ cd server
 npm install
 node index.js
 ```
-After this, BonziWORLD will be accessible on port 80. (http://localhost/)
+After this, BonziWORLD will be accessible on port 80. (http://localhost:3000/)
 
 ## Disclaimer
 I'm not responsible if you screw up anything with your computer while setting this up. I have no idea how you would, but someone will find a way. I also will not provide support for installing dependencies. If you have everything installed properly, the above commands will work.
