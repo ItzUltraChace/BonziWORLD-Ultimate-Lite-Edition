@@ -177,16 +177,6 @@ let userCommands = {
         });
     },
     "triggered": "passthrough",
-    "vaporwave": function() {
-        this.socket.emit("vaporwave");
-        this.room.emit("youtube", {
-            guid: this.guid,
-            vid: "aQkPcPqTq4M"
-        });
-    },
-    "unvaporwave": function() {
-        this.socket.emit("unvaporwave");
-    },
     "name": function() {
         let argsString = Utils.argsString(arguments);
         if (argsString.length > this.room.prefs.name_limit)
