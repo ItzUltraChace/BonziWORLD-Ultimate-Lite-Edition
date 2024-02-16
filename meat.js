@@ -127,18 +127,6 @@ let userCommands = {
         let argsString = Utils.argsString(arguments);
         this.private.sanitize = !sanitizeTerms.includes(argsString.toLowerCase());
     },
-    "joke": function() {
-        this.room.emit("joke", {
-            guid: this.guid,
-            rng: Math.random()
-        });
-    },
-    "fact": function() {
-        this.room.emit("fact", {
-            guid: this.guid,
-            rng: Math.random()
-        });
-    },
     "youtube": function(vidRaw) {
         var vid = this.private.sanitize ? sanitize(vidRaw) : vidRaw;
         this.room.emit("youtube", {
@@ -146,15 +134,6 @@ let userCommands = {
             vid: vid
         });
     },
-    "backflip": function(swag) {
-        this.room.emit("backflip", {
-            guid: this.guid,
-            swag: swag == "swag"
-        });
-    },
-    "linux": "passthrough",
-    "pawn": "passthrough",
-    "bees": "passthrough",
     "color": function(color) {
         if (typeof color != "undefined") {
             if (settings.bonziColors.indexOf(color) == -1)
@@ -176,7 +155,6 @@ let userCommands = {
             target: sanitize(Utils.argsString(arguments))
         });
     },
-    "triggered": "passthrough",
     "name": function() {
         let argsString = Utils.argsString(arguments);
         if (argsString.length > this.room.prefs.name_limit)
@@ -186,36 +164,24 @@ let userCommands = {
         this.public.name = this.private.sanitize ? sanitize(name) : name;
         this.room.updateUser(this);
     },
-    "pitch": function(pitch) {
-        pitch = parseInt(pitch);
+  pitch: function (pitch) {
+      pitch = parseInt(pitch);
 
-        if (isNaN(pitch)) return;
+      if (isNaN(pitch)) return;
 
-        this.public.pitch = Math.max(
-            Math.min(
-                parseInt(pitch),
-                this.room.prefs.pitch.max
-            ),
-            this.room.prefs.pitch.min
-        );
+      this.public.pitch = pitch;
 
-        this.room.updateUser(this);
-    },
-    "speed": function(speed) {
-        speed = parseInt(speed);
+      this.room.updateUser(this);
+  },
+  speed: function (speed) {
+      speed = parseInt(speed);
 
-        if (isNaN(speed)) return;
+      if (isNaN(speed)) return;
 
-        this.public.speed = Math.max(
-            Math.min(
-                parseInt(speed),
-                this.room.prefs.speed.max
-            ),
-            this.room.prefs.speed.min
-        );
-        
-        this.room.updateUser(this);
-    }
+      this.public.speed = speed;
+
+      this.room.updateUser(this);
+  }
 };
 
 
