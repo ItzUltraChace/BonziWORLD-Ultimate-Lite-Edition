@@ -12,8 +12,8 @@ input[type="text"] {
   color: #000; }
 
 .xp_bubble, #content {
-  background: #ffffe1;
-  color: #000;
+  background: #000000;
+  color: #ffffff;
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
   border-radius: 9px;
@@ -28,18 +28,14 @@ html {
   overflow-y: auto; }
 
 body {
-  background-color: #6d33a0;
-  background-image: url("../img/desktop/bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-color: #6d33a0; }
 
 #content {
   width: 75%;
   max-width: 800px;
   margin: 32px auto;
   padding: 16px 32px;
-  background-color: rgba(255, 255, 225, 0.8); }
+  background-color: rgba(000, 000, 000, 0.8); }
 
 #bonziworld {
   display: none; }
