@@ -185,6 +185,20 @@ let userCommands = {
             vid: vid
         });
     },
+	"video": function(vidRaw){
+        var vid = this.private.sanitize ? sanitize(vidRaw) : vidRaw;
+        this.room.emit("video", {
+            guid: this.guid,
+            vid: vid
+        });
+    },
+	"image": function(vidRaw){
+        var vid = this.private.sanitize ? sanitize(vidRaw) : vidRaw;
+        this.room.emit("image", {
+            guid: this.guid,
+            vid: vid
+        });
+    },
     "color": function(color) {
         if (typeof color != "undefined") {
             if (settings.bonziColors.indexOf(color) == -1)
