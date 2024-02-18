@@ -36,27 +36,4 @@ $(function() {
     $("#page_unsupp").show();
   }
 
-  if (isChromeBrowser && isDesktop) {
-    $(".app_showcase").append(
-      '<a class="app_chrome" href="' + urlChrome + '">' +
-        '<img src="./img/app/chrome.png" alt="Chrome App" />' +
-      '</a>'
-    );
-  }
-
-  if (!isiOS) {
-    $(".app_showcase").append(
-      '<a class="app_android" href="' + urlGPlay + '">' +
-        '<img src="./img/app/google-play-badge.png" alt="Get it on Google Play." />' +
-      '</a>'
-    );
-  }
-
-  if (!isDesktop) {
-    $(".app_showcase").append(
-      '<a class="app_chrome">' +
-        '<img src="./img/app/desktop.png" alt="Open on PC for the best experience." />' +
-      '</a>'
-    );
-  }
 });
