@@ -197,7 +197,7 @@ code{
     border-radius: 9px;
     border: 1px solid rgba(0, 0, 0, 0.725);
   outline: 5;
-  backdrop-filter: blur(6px) brightness(1.25);
+  backdrop-filter: blur(6px) brightness(0.50);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
    background-blend-mode: overlay;
   background-attachment: fixed;
@@ -282,7 +282,7 @@ code{
       width: 0;
       top: 9px; }
     .bubble:after, .bubble_rev:after {
-      border-color: transparent #ffffe1;
+      border-color: transparent #000;
       z-index: 1; }
     .bubble:before, .bubble_rev:before {
       border-color: transparent #000000;
@@ -318,7 +318,7 @@ code{
     position: absolute;
     background: rgba(#fff, #fff, #fff, 0.9);
       background-color: rgba(#fff, #fff, #fff, 0.9);
-  backdrop-filter: blur(6px) brightness(1.25);
+  backdrop-filter: blur(6px) brightness(0.50);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
    background-blend-mode: overlay;
   background-attachment: fixed;
@@ -331,7 +331,10 @@ code{
     color: #d6e6ff; }
 
   #content {
-    background-color: #421f60; }
+  background-color: #6d33a0;
+  background-image: url("../img/desktop/logo.png"), url("../img/desktop/bg.png");
+  background-position: top left, center;
+  background-repeat: no-repeat; }
 
   #chat_bar {
     position: absolute;
