@@ -113,8 +113,8 @@ code{
     border-radius: 3px;
     box-shadow: 2px 2px 2px #13316f;
     outline: none;
-    background: #000;
-    color: #fff; }
+    background: #fff;
+    color: #000; }
 
   #content {
     width: 100%;
@@ -188,12 +188,15 @@ code{
     color: #000; }
 
   .xp_bubble, .bubble, .bubble_rev {
-    background: #ffffe1;
+    background: rgba(#fff, #fff, #fff, 0.9);
+      background-color: rgba(#fff, #fff, #fff, 0.9);
     color: #d6e6ff;
+  opacity: 97%;
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
     border-radius: 9px;
     border: 1px solid rgba(0, 0, 0, 0.725);
+  outline: 5;
   backdrop-filter: blur(6px) brightness(1.25);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
    background-blend-mode: overlay;
@@ -242,11 +245,13 @@ code{
 
   .bonzi > canvas, .bonzi_placeholder {
     position: absolute;
-  cursor: grab; }
+  cursor: grab;
+  filter: drop-shadow(20px -5px 4px rgba(0,0,0,0.2)); }
 
  .bonzi:active > canvas, .bonzi_placeholder:active {
    position: absolute;
-  cursor: grabbing;}
+  cursor: grabbing;
+  filter: drop-shadow(20px -5px 4px rgba(0,0,0,0.2)); }
 
   .bubble, .bubble_rev {
     position: absolute;
@@ -266,7 +271,8 @@ code{
     -ms-hyphens: auto;
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
-    hyphens: auto; }
+    hyphens: auto;
+  filter: drop-shadow(20px -5px 4px rgba(0,0,0,0.2)); }
     .bubble:after, .bubble:before, .bubble_rev:after, .bubble_rev:before {
       content: '';
       position: absolute;
@@ -307,7 +313,7 @@ code{
     border-style: solid;
     border-width: 4px 12px 4px 0;
     border-radius: 9px;
-    border: #000000 solid 1px;
+  border: 1px solid rgba(0, 0, 0, 0.725);
     padding: 8px;
     position: absolute;
     background: rgba(#fff, #fff, #fff, 0.9);
@@ -325,7 +331,7 @@ code{
     color: #d6e6ff; }
 
   #content {
-    background-color: #6d33a0; }
+    background-color: #421f60; }
 
   #chat_bar {
     position: absolute;
@@ -352,7 +358,8 @@ code{
     letter-spacing: 2px;
     font-size: 16px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
-    padding-left: 35px; }
+    padding-left: 35px;
+    cursor: pointer; }
     #chat_send:hover {
       background-position: 0 -33px; }
     #chat_send:active {
@@ -443,7 +450,8 @@ code{
     height: 20px;
     background-image: url("../img/logon/go.png");
     background-size: 100%;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    cursor: pointer; }
     #login_go:hover {
       background-position: 0 -20px; }
     #login_go:active {
