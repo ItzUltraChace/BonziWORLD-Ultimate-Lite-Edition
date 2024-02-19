@@ -86,12 +86,25 @@ code{
     z-index: 999; }
 
   .xp_dialog, .message_cont {
-    background: #ffffe1;
-    color: #000;
-    -webkit-border-radius: 9px;
-    -moz-border-radius: 9px;
-    border-radius: 9px;
-    border: #000000 solid 1px; }
+  border: 1px solid rgba(0, 0, 0, 0.725);
+  outline: 5;
+    background: rgba(#fff, #fff, #fff, 0.9);
+      background-color: rgba(#fff, #fff, #fff, 0.9);
+    -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+    color: #d6e6ff;
+  opacity: 97%;
+  backdrop-filter: blur(6px) brightness(1.25);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+   background-blend-mode: overlay;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transform: translateZ(0x);
+  background-size: 100vw 100vh;
+  transition: background-color 125ms ease-in-out;
+  will-change: backdrop-filter, background-color;
+}
 
   .xp_textbox, #login_error, #login_readme, #login_name, #login_room {
     position: absolute;
@@ -100,8 +113,8 @@ code{
     border-radius: 3px;
     box-shadow: 2px 2px 2px #13316f;
     outline: none;
-    background: #fff;
-    color: #000; }
+    background: #000;
+    color: #fff; }
 
   #content {
     width: 100%;
@@ -176,11 +189,20 @@ code{
 
   .xp_bubble, .bubble, .bubble_rev {
     background: #ffffe1;
-    color: #000;
+    color: #d6e6ff;
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
     border-radius: 9px;
-    border: #000000 solid 1px; }
+    border: 1px solid rgba(0, 0, 0, 0.725);
+  backdrop-filter: blur(6px) brightness(1.25);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+   background-blend-mode: overlay;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transform: translateZ(0x);
+  background-size: 100vw 100vh;
+  transition: background-color 125ms ease-in-out;
+  will-change: backdrop-filter, background-color; }
 
   @font-face {
     font-family: 'Tahoma';
@@ -188,11 +210,28 @@ code{
     font-weight: normal;
     font-style: normal; }
   #bonzi_canvas {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0; }
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  top: 0;
+  left: 0;
+  filter: drop-shadow(20px -5px 4px rgba(0,0,0,0.2));
+}
+#bonzi_canvas:active {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  top: 0;
+  left: 0;
+}
 
   .bonzi {
     position: fixed;
@@ -202,7 +241,12 @@ code{
     user-select: none; }
 
   .bonzi > canvas, .bonzi_placeholder {
-    position: absolute; }
+    position: absolute;
+  cursor: grab; }
+
+ .bonzi:active > canvas, .bonzi_placeholder:active {
+   position: absolute;
+  cursor: grabbing;}
 
   .bubble, .bubble_rev {
     position: absolute;
@@ -266,52 +310,22 @@ code{
     border: #000000 solid 1px;
     padding: 8px;
     position: absolute;
-    background: #ffffe1;
+    background: rgba(#fff, #fff, #fff, 0.9);
+      background-color: rgba(#fff, #fff, #fff, 0.9);
+  backdrop-filter: blur(6px) brightness(1.25);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+   background-blend-mode: overlay;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transform: translateZ(0x);
+  background-size: 100vw 100vh;
+  transition: background-color 125ms ease-in-out;
+  will-change: backdrop-filter, background-color;
     font-size: 12px;
-    color: #000; }
-
-  .bubble_greentext {
-    color: #789922; }
-
-  body.vaporwave #content {
-    background-color: #008080;
-    background-image: url("../img/desktop.vaporwave/logo.png"), url("../img/desktop.vaporwave/bg.png");
-    background-position: top left, center;
-    background-repeat: no-repeat; }
-  body.vaporwave #chat_bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 28px;
-    background-image: url("../img/desktop.vaporwave/taskbar.png");
-    background-size: 100% 100%;
-    z-index: 999; }
-  body.vaporwave #chat_send {
-    width: 58px;
-    background-image: url("../img/desktop.vaporwave/start.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
-    color: #000;
-    font-family: "MS Sans Serif", Tahoma, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 11px;
-    text-shadow: none;
-    padding-left: 21px;
-    text-transform: capitalize; }
-    body.vaporwave #chat_send:hover {
-      background-position: 0 -28px; }
-    body.vaporwave #chat_send:active {
-      background-position: 0 -56px; }
+    color: #d6e6ff; }
 
   #content {
-    background-color: #6d33a0;
-    background-image: url("../img/desktop/logo.png"), url("../img/desktop/bg.png");
-    background-position: top left, center;
-    background-repeat: no-repeat; }
+    background-color: #6d33a0; }
 
   #chat_bar {
     position: absolute;
@@ -396,7 +410,7 @@ code{
     padding: 8px; }
 
   #login_readme {
-    color: #444;
+    color: #fff;
     padding: 12px;
     bottom: 24%;
     width: auto;
